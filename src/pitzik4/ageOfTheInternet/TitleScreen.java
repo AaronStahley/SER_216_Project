@@ -6,14 +6,28 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.JOptionPane;
 
 public class TitleScreen implements Stage {
 	private Game owner;
 	private BufferedImage title;
 	private Button gameStartButton;
+	
+	
+	private boolean done = false;
+	
+	// Button Variables for starting the game. 
 	private boolean gameStartButtonClicked = false;
 	private boolean gameStarting = false;
-	private boolean done = false;
+	
+	// Button Variables for the directions.
+	private Button directionsButton; 
+	private boolean directionsButtonClicked = false;
+	
+	// Button Variables for exiting the game. 
+	private Button exitGameButton;
+	private boolean exitGameButtonClicked = false; 
+		
 	
 	public TitleScreen(Game owner) {
 		try {
@@ -22,14 +36,50 @@ public class TitleScreen implements Stage {
 			e.printStackTrace();
 		}
 		this.owner = owner;
-		gameStartButton = new Button(owner, 96, 160, 128, "Start Game");
+		
+		//Instantiates the game start and directions button and exit button.
+		gameStartButton = new Button(owner, 96, 127, 128, "Start Game");
+		
+		directionsButton = new Button(owner,96,160,128,"Directions");
+		
+		exitGameButton = new Button(owner,96,191,128, "Exit Game"); 
+	
 	}
 
 	@Override
 	public void tick() {
+		
+		// Makes the buttons have a hover state. (Clickable)
 		gameStartButton.tick();
-		if(gameStartButton.isClicked)
+		directionsButton.tick();
+		exitGameButton.tick();
+		
+		if(exitGameButton.isClicked){
+			exitGameButtonClicked = true; 
+			System.exit(0); 
+		}
+		
+		if(directionsButton.isClicked){
+			
+			directionsButtonClicked = true;
+			// Make a pop up window that displays the directions of the game.  
+			
+			//Directions pop up menu. 
+			JOptionPane.showMessageDialog(owner,
+				  "\n"
+			    + "\n"
+			    + "\n"
+			    + "\n",
+			    "Directions",
+			    JOptionPane.PLAIN_MESSAGE);
+		
+
+		}
+		
+		if(gameStartButton.isClicked){
 			gameStartButtonClicked = true;
+		}
+		
 		if(gameStartButtonClicked && !gameStartButton.isClicked) {
 			gameStarting = true;
 		}
@@ -64,10 +114,21 @@ public class TitleScreen implements Stage {
 
 	@Override
 	public void drawOn(Graphics2D g, int scrollx, int scrolly) {
+		
 		scrollx = 0;
 		scrolly = 0;
+		
+		//Draws the title image .gif
 		g.drawImage(title, 111-scrollx, 64-scrolly, null);
+		
+		//Draws the start button on the screen. 
 		gameStartButton.drawOn(g, scrollx, scrolly);
+		
+		// Draws the directions button on the screen. 
+		directionsButton.drawOn(g,scrollx,scrolly); 
+		
+		// Draws the exit game button on the screen. 
+		exitGameButton.drawOn(g,scrollx,scrolly);
 	}
 
 	@Override
