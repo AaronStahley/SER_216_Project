@@ -6,11 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
-import addedComponents.JScrollPopupMenu;
-
 
 public class TitleScreen implements Stage {
 	private Game owner;
@@ -31,9 +27,7 @@ public class TitleScreen implements Stage {
 	// Button Variables for exiting the game. 
 	private Button exitGameButton;
 	private boolean exitGameButtonClicked = false; 
-	
-	private JScrollPopupMenu directionsMenu; 
-	
+		
 	
 	public TitleScreen(Game owner) {
 		try {
@@ -49,9 +43,7 @@ public class TitleScreen implements Stage {
 		directionsButton = new Button(owner,96,160,128,"Directions");
 		
 		exitGameButton = new Button(owner,96,191,128, "Exit Game"); 
-		
-		directionsMenu = new JScrollPopupMenu("Directions"); 
-		directionsMenu.setBounds(0, 0, 100, 100);
+	
 	}
 
 	@Override
