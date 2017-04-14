@@ -11,12 +11,11 @@ import javax.swing.JOptionPane;
 public class TitleScreen implements Stage {
 	private Game owner;
 	private BufferedImage title;
-	private Button gameStartButton;
-	
-	
+
 	private boolean done = false;
 	
 	// Button Variables for starting the game. 
+	private Button gameStartButton;
 	private boolean gameStartButtonClicked = false;
 	private boolean gameStarting = false;
 	
