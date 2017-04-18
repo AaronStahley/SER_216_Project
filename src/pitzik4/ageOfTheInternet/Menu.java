@@ -1,3 +1,4 @@
+
 package pitzik4.ageOfTheInternet;
 
 import java.awt.Graphics2D;
