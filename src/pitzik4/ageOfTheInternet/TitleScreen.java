@@ -60,18 +60,36 @@ public class TitleScreen implements Stage {
 		
 		if(directionsButton.isClicked){
 			
-			directionsButtonClicked = true;
-			// Make a pop up window that displays the directions of the game.  
-			
-			//Directions pop up menu. 
-			JOptionPane.showMessageDialog(owner,
-				  "\n"
-			    + "\n"
-			    + "\n"
-			    + "\n",
-			    "Directions",
-			    JOptionPane.PLAIN_MESSAGE);
+			if(directionsButton.isClicked){
+				
+				directionsButtonClicked = true;
+				// Make a pop up window that displays the directions of the game.  
+				
+				//Directions pop up menu. 
+				JOptionPane.showMessageDialog(owner,
+					  "Objective:\n"
+				    + "Escape by hacking various types of computers\n"
+				    + "to get to the laboratory which possess the machine\n"
+				    + "to bring you back into the real world.\n"
+				    + "\n"
+				    + "Game Play:\n"
+				    + "Click on a computer to interact. Hacking computers\n"
+				    + "will advance you through the level but each computer\n"
+				    + "costs RAM to hack. Hack into corporations to\n"
+				    + "(yellow computers) to make money. If you are out of\n"
+				    + "ram you’ll have to upgrade your home computer by\n"
+				    + "using the cash you made from the corporations.\n"
+				    + "If the corporate computers are flashing you must\n"
+				    + "secure them by clicking on the computer and pressing\n"
+				    + "the secure button.\n"
+				    + "\n"
+				    + "Navigation:\n"
+				    + "Use the arrow keys to move across the level and reveal\n"
+				    + "more computers to hack.\n",
+				    "Directions",
+				    JOptionPane.PLAIN_MESSAGE);
 		
+			}
 
 		}
 		

@@ -6,13 +6,13 @@ import java.awt.image.BufferedImage;
 import pitzik4.ageOfTheInternet.graphics.BlueFrame;
 import pitzik4.ageOfTheInternet.graphics.RenderableString;
 
-public class LoseScreen implements RenderableTickable {	
-	public Button retry;
+public class LoseScreen implements RenderableTickable {
 	private RenderableString youLose;
 	private RenderableString loseReason;
+	public Button retry;
+	public Button exitToMenu; 
 	private BlueFrame bg;
-	private int x=0;//multiple declarations per line fixed -chase
-	private int y=0;
+	private int x=0, y=0;
 	
 	public LoseScreen(Game owner, int x, int y, int width, int height, String reason) {
 		this.x = x;
@@ -23,6 +23,8 @@ public class LoseScreen implements RenderableTickable {
 		loseReason = new RenderableString(reason, 0, 0);
 		loseReason.goTo(x+((width-loseReason.width)/2), y+(height/2-loseReason.height/2));
 		retry = new Button(owner, x+width/4, y+(height/3)*2, width/2, "Retry");
+		exitToMenu = new Button(owner, x+width/4, 65+y+(height/4)*2, width/2, "Exit");
+
 	}
 
 	@Override
@@ -37,6 +39,8 @@ public class LoseScreen implements RenderableTickable {
 		youLose.drawOn(g, scrollx, scrolly);
 		loseReason.drawOn(g, scrollx, scrolly);
 		retry.drawOn(g, scrollx, scrolly);
+		exitToMenu.drawOn(g, scrollx, scrolly);
+
 	}
 
 	@Override
@@ -68,12 +72,22 @@ public class LoseScreen implements RenderableTickable {
 		youLose.goTo(youLose.getX()+dx, youLose.getY()+dy);
 		loseReason.goTo(loseReason.getX()+dx, loseReason.getY()+dy);
 		retry.goTo(retry.getX()+dx, retry.getY()+dy);
+		exitToMenu.goTo(exitToMenu.getX()+dx, exitToMenu.getY()+dy);
+
+		
 		bg.goTo(bg.getX()+dx, bg.getY()+dy);
 	}
 
 	@Override
 	public void tick() {
 		retry.tick();
+		exitToMenu.tick();
+		
+		if(exitToMenu.isClicked){
+			// Go back to the title screen.
+			System.exit(0); 
+
+		}
 	}
 
 }
