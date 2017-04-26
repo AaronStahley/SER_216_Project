@@ -44,17 +44,17 @@ public class Level implements Stage {
 	private boolean done = false;
 	private boolean closing = false;
 	private int ram = 0;
-	private RenderableString ramRender;
+	private int ramCost = 5;
+	private int money = 0;
 	private boolean resetting = false;
 	private boolean lost = false;
 	private boolean almostResetting = false;
 	private LoseScreen loseScreen = null;
-	private int money = 0;
+	private RenderableString ramRender;
 	private RenderableString moneyRender;
-	private int ramCost = 5;
 	private Set<Tile> ownedComputers = new HashSet<Tile>();
-	private static final int RAM_UPGRADE_AMT = 10;
 	private static final Random rnd = new Random();
+	private static final int RAM_UPGRADE_AMT = 10;
 	public static final int[] levelRAMs = {20, 30, 0, 15, 10, 25, 95};
 	public static final int[] levelMoneys = {0, 0, 26, 0, 0, 0, 95};
 	

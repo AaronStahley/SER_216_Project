@@ -8,13 +8,14 @@ import pitzik4.ageOfTheInternet.graphics.Screen;
 import pitzik4.ageOfTheInternet.graphics.Sprite;
 
 public class XButton implements Renderable, Tickable {
-	private Game owner;
-	private Sprite sprite;
-	private int x=0, y=0;
 	public boolean isClicked = false;
 	public boolean isScrolled = false;
 	public static final int BUTTON_SPRITE = 260;
 	public static final int BU_SI = 8;
+	private Game owner;
+	private Sprite sprite;
+	private int x = 0;
+	private int y = 0;
 	
 	public XButton(Game owner, int x, int y) {
 		this.owner = owner;

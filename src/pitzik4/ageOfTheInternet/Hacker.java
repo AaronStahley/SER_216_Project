@@ -8,10 +8,11 @@ import pitzik4.ageOfTheInternet.graphics.Sprite;
 
 public class Hacker implements RenderableTickable {
 	private Sprite sprite;
-	private int x=0, y=0;
-	public boolean going=false;
 	private Point[] path;
+	private int x=0;//fixed multiple declarations per line here -chase
+	private int y=0;
 	private int progress = 0;
+	public boolean going=false;
 	public static final int STEP_SIZE = 3;
 	
 	public Hacker(int x, int y, Point[] path) {

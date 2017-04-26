@@ -11,7 +11,8 @@ public class Button implements Renderable, Tickable {
 	private Game owner;
 	private Sprite[] sprites;
 	private RenderableString str;
-	private int x=0, y=0;
+	private int x=0;//fixed multiple declarations on one line here -chase
+	private int y=0;
 	private int width;
 	public boolean isClicked = false;
 	public boolean isScrolled = false;

@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import pitzik4.ageOfTheInternet.Game;
 import pitzik4.ageOfTheInternet.Level;
 import pitzik4.ageOfTheInternet.Menu;
+import pitzik4.ageOfTheInternet.Player;
 import pitzik4.ageOfTheInternet.graphics.Sprite;
 
 public class ComputerTile extends Tile {
@@ -62,7 +63,7 @@ public class ComputerTile extends Tile {
 	public void hack() {
 		if(!yours) {
 			yours = true;
-			//sprite = new Sprite(32, x, y, false);
+			sprite = new Sprite(32, x, y, false); //fixed PC sprite -chase
 			riCliMenuOptions[0] = "Unhack";
 			((Level) owner.currentLevel).hack(this);
 		}

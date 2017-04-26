@@ -34,9 +34,6 @@ public abstract class Tile implements Renderable, Tickable {
 		if(t instanceof CorporationTile) {
 			return 0xFF00FF;
 		}
-		if(t instanceof ChurchTile) {
-			return 0x808080;
-		}
 		if(t instanceof HackerTile) {
 			return 0x008000;
 		}
@@ -61,9 +58,6 @@ public abstract class Tile implements Renderable, Tickable {
 		}
 		if(id == 0xFF00FF) {
 			return new CorporationTile(x, y, owner);
-		}
-		if(id == 0x808080) {
-			return new ChurchTile(x, y, owner);
 		}
 		if(id == 0x008000) {
 			return new HackerTile(x, y, owner);

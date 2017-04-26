@@ -11,8 +11,10 @@ import pitzik4.ageOfTheInternet.graphics.Renderable;
 import pitzik4.ageOfTheInternet.graphics.RenderableString;
 
 public class PauseScreen implements Renderable,Stage {
-	private int x=0, y=0;
-	private int width=0, height=0;
+	private int x = 0;
+	private int y = 0;
+	private int width = 0;
+	private int height = 0;
 	private RenderableString message;
 	private BlueFrame frame;
 	private Game owner;

@@ -25,8 +25,8 @@ public class HackerTile extends Tile {
 	private boolean hacking = false;
 	private int hackTimer = 0;
 	public boolean initiatedUnhacking = false;
-	public static int slowestUnhack = 80;
-	public static int fastestUnhack = 60;
+	public static int slowestUnhack = 180;//og 80
+	public static int fastestUnhack = 80;//og 60
 	public static int hackersOwned = 0;
 	private static final int[] UNHACK_FLASH_FRAMES = {43, 45};
 	private static final int[] HACK_FLASH_FRAMES = {43, 46};

@@ -11,11 +11,13 @@ import pitzik4.ageOfTheInternet.graphics.Sprite;
 public class Menu implements Renderable, Tickable {
 	public XButton exitButton;
 	public Button[] buttons;
-	private RenderableString str;
-	private int x=0, y=0;
-	private int width=0, height=0;
-	private boolean exiting=false;
 	public boolean exited=false;
+	private RenderableString str;
+	private int x = 0;//coding conventions and variable arrangement/declarations fixed -chase
+	private int y = 0;
+	private int width = 0;
+	private int height = 0;
+	private boolean exiting=false;
 	
 	public Menu(Game owner, int x, int y, int width, String[] extraButtons, String title) {
 		this.x = x;

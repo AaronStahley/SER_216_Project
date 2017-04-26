@@ -8,11 +8,12 @@ import pitzik4.ageOfTheInternet.graphics.Sprite;
 import pitzik4.ageOfTheInternet.tiles.HackerTile;
 
 public class Player implements RenderableTickable {
+	public boolean going = false;
 	private Sprite sprite;
-	private int x=0, y=0;
-	public boolean going=false;
-	private Point[] path;
+	private int x = 0;
+	private int y = 0;
 	private int progress = 0;
+	private Point[] path;
 	
 	public static final int stepSize() {
 		return 3 + HackerTile.hackersOwned;

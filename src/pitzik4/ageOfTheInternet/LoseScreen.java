@@ -6,12 +6,13 @@ import java.awt.image.BufferedImage;
 import pitzik4.ageOfTheInternet.graphics.BlueFrame;
 import pitzik4.ageOfTheInternet.graphics.RenderableString;
 
-public class LoseScreen implements RenderableTickable {
+public class LoseScreen implements RenderableTickable {	
+	public Button retry;
 	private RenderableString youLose;
 	private RenderableString loseReason;
-	public Button retry;
 	private BlueFrame bg;
-	private int x=0, y=0;
+	private int x=0;//multiple declarations per line fixed -chase
+	private int y=0;
 	
 	public LoseScreen(Game owner, int x, int y, int width, int height, String reason) {
 		this.x = x;

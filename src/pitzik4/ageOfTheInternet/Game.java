@@ -39,6 +39,7 @@ public class Game extends Applet implements Runnable, WindowListener, KeyListene
 	private BufferedImage img;
 	public long tickAmount = 0;
 	public short ticks = 0;
+	public int level = 0;
 	public int frames = 0;
 	public boolean stopping = false;
 	public List<Tickable> tickables = new ArrayList<Tickable>();
@@ -48,7 +49,6 @@ public class Game extends Applet implements Runnable, WindowListener, KeyListene
 	private volatile boolean mouseActuallyDown = false;
 	private volatile boolean mouseReleasedTooSoon = false;
 	public volatile boolean rightButton = false;
-	public int level = 0;
 	public Stage currentLevel;
 	public Stage[] levels = new Stage[12];
 	public PauseScreen pausescreen;
@@ -63,7 +63,7 @@ public class Game extends Applet implements Runnable, WindowListener, KeyListene
 	
 	@Override
 	public void init() {
-		game = this;
+		//game = this; write to static field from instance method findbugs - chase
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		setSize(new Dimension(WIDTH, HEIGHT));
 		addKeyListener(this);
