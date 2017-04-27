@@ -1,6 +1,5 @@
 package pitzik4.ageOfTheInternet;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
@@ -10,7 +9,7 @@ import pitzik4.ageOfTheInternet.graphics.BlueFrame;
 import pitzik4.ageOfTheInternet.graphics.Renderable;
 import pitzik4.ageOfTheInternet.graphics.RenderableString;
 
-public class PauseScreen implements Renderable,Stage,Tickable {
+public class PauseScreen implements Renderable,Tickable {
 	private int x = 0;
 	private int y = 0;
 	private int width = 0;
@@ -35,6 +34,8 @@ public class PauseScreen implements Renderable,Stage,Tickable {
 		this.frame = new BlueFrame(x, y, width, height);
 		this.message = new RenderableString("Game Paused", 0, 80);
 		this.message.centerBetweenX(x, x+width);
+		
+		//This line will center the paused message vertically
 	//	this.message.centerBetweenY(y, y+height);
 		
 		// Instantiates the buttons on the pause screen
@@ -76,14 +77,14 @@ public class PauseScreen implements Renderable,Stage,Tickable {
 	
 	@Override
 	public void tick(){
+		
+		// Supposed to make the buttons clickable but not working
 		directionsButton.tick();
 		restartButton.tick();
 		exitButton.tick();
 		
 		if(exitButton.isClicked){
-			// Go back to the title screen.
 			System.exit(0); 
-
 		}
 		
 		//Displays the directions when clicked 
@@ -122,6 +123,8 @@ public class PauseScreen implements Renderable,Stage,Tickable {
 		}
 		if(restartButton.isClicked){
 			//restart the current level. 
+			owner.resetLevel();
+			
 		}
 	}
 	
@@ -154,35 +157,6 @@ public class PauseScreen implements Renderable,Stage,Tickable {
 		frame.goTo(frame.getX()+dx, frame.getY()+dy);
 		message.goTo(message.getX()+dx, message.getY()+dy);
 	}
-	@Override
-	public boolean isClosing() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean isResetting() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public int getWidth() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	@Override
-	public int getHeight() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	@Override
-	public Dimension getSize() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public boolean isScrollable() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+
 
 }

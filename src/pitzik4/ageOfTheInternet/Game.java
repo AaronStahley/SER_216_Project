@@ -262,6 +262,7 @@ public class Game extends Applet implements Runnable, WindowListener, KeyListene
 		levels[level-1] = remakeLevel(level-1);
 		beginGame();
 	}
+	
 	public void resetLevel() {
 		screen.removeRenderable(currentLevel);
 		removeTickable(currentLevel);
