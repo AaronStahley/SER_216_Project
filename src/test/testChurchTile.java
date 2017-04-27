@@ -1,5 +1,5 @@
 package test;
-
+/*
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -70,3 +70,4 @@ public class testChurchTile
 	}
 
 }
+*/
