@@ -10,7 +10,7 @@ import pitzik4.ageOfTheInternet.graphics.BlueFrame;
 import pitzik4.ageOfTheInternet.graphics.Renderable;
 import pitzik4.ageOfTheInternet.graphics.RenderableString;
 
-public class PauseScreen implements Renderable,Stage {
+public class PauseScreen implements Renderable,Stage,Tickable {
 	private int x = 0;
 	private int y = 0;
 	private int width = 0;

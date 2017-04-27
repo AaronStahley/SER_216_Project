@@ -84,7 +84,7 @@ public class LoseScreen implements RenderableTickable {
 		exitToMenu.tick();
 		
 		if(exitToMenu.isClicked){
-			// Go back to the title screen.
+		
 			System.exit(0); 
 
 		}
