@@ -21,13 +21,8 @@ public class TitleScreen implements Stage {
 	
 	// Button Variables for the directions.
 	private Button directionsButton; 
-	private boolean directionsButtonClicked = false;
-	
 	// Button Variables for exiting the game. 
 	private Button exitGameButton;
-	private boolean exitGameButtonClicked = false; 
-		
-	
 	public TitleScreen(Game owner) {
 		try {
 			title = ImageIO.read(Game.class.getResourceAsStream("/title.gif"));
@@ -54,16 +49,12 @@ public class TitleScreen implements Stage {
 		exitGameButton.tick();
 		
 		if(exitGameButton.isClicked){
-			exitGameButtonClicked = true; 
 			System.exit(0); 
 		}
 		
 		if(directionsButton.isClicked){
 			
 			if(directionsButton.isClicked){
-				
-				directionsButtonClicked = true;
-				// Make a pop up window that displays the directions of the game.  
 				
 				//Directions pop up menu. 
 				JOptionPane.showMessageDialog(owner,

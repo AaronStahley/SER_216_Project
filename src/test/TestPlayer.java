@@ -31,7 +31,7 @@ public class TestPlayer
 	@Test
 	public void testStepSize() 
 	{
-		assertEquals(play.stepSize(), 3);
+		assertEquals(Player.stepSize(), 3);
 	}
 
 	@Test

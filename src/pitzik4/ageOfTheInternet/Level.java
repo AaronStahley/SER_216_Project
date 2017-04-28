@@ -681,6 +681,10 @@ public class Level implements Stage {
 			return isOwned(t);
 		}
 	}
+	
+	public boolean getLost() {
+		return lost;
+	}
 	public boolean isEvil(int x, int y) {
 		return isEvil(tiles[x/Sprite.SPRITE_WIDTH][y/Sprite.SPRITE_HEIGHT]);
 	}
@@ -712,6 +716,9 @@ public class Level implements Stage {
 	}
 	public void emitMoneyParticleFrom(Tile t) {
 		moneyParticles.add(new MoneyParticle(t.getX(), t.getY()-Sprite.SPRITE_HEIGHT));
+	}
+	public void setLost(boolean b) {
+		lost = b;		
 	}
 
 }

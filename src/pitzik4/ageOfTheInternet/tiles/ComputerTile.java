@@ -5,7 +5,6 @@ import java.awt.Graphics2D;
 import pitzik4.ageOfTheInternet.Game;
 import pitzik4.ageOfTheInternet.Level;
 import pitzik4.ageOfTheInternet.Menu;
-import pitzik4.ageOfTheInternet.Player;
 import pitzik4.ageOfTheInternet.graphics.Sprite;
 
 public class ComputerTile extends Tile {

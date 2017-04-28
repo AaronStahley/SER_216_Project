@@ -7,7 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import pitzik4.ageOfTheInternet.Game;
-import pitzik4.ageOfTheInternet.PauseScreen;
 import pitzik4.ageOfTheInternet.TitleScreen;
 
 public class TestTitleScreen 

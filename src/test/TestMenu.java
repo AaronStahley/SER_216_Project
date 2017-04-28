@@ -6,11 +6,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import pitzik4.ageOfTheInternet.Button;
 import pitzik4.ageOfTheInternet.Game;
 import pitzik4.ageOfTheInternet.Menu;
-import pitzik4.ageOfTheInternet.XButton;
-import pitzik4.ageOfTheInternet.graphics.RenderableString;
 
 public class TestMenu 
 {

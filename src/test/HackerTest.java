@@ -3,22 +3,17 @@ package test;
 import static org.junit.Assert.*;
 
 import java.awt.Point;
-import java.awt.image.BufferedImage;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import pitzik4.ageOfTheInternet.Hacker;
-import pitzik4.ageOfTheInternet.graphics.Sprite;
 
 public class HackerTest 
 {
-	private Sprite sprite;
 	private int x=0, y=0;
 	public boolean going=false;
 	private Point[] path;
-	private int progress = 0;
 	public static final int STEP_SIZE = 3;
 	public Hacker hack;
 	

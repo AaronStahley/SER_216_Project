@@ -2,17 +2,12 @@ package test;
 
 import static org.junit.Assert.*;
 
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import pitzik4.ageOfTheInternet.Button;
 import pitzik4.ageOfTheInternet.Game;
-import pitzik4.ageOfTheInternet.graphics.RenderableString;
-import pitzik4.ageOfTheInternet.graphics.Sprite;
 
 public class ButtonTest 
 {
@@ -20,12 +15,9 @@ public class ButtonTest
 	private Game owner;
 
 	private Button button;
-	private Sprite[] sprites;
-	private RenderableString str;
 	private int xOff;
 	private int yOff;
 	private int x=0, y=0;
-	private int width;
 	public boolean isClicked = false;
 	public boolean isScrolled = false;
 	public boolean nowClicked = false;
